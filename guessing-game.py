@@ -14,10 +14,6 @@ while True:
     giveup = raw_input('do you give up??')
     if giveup == 'yes' :
       break
-    else :
-      score = 0
-      guess = int(raw_input("whats's your guess"))
-      num = random.randint(0,choice)
   else:
     if score > num :
       print 'too high'
