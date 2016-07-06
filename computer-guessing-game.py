@@ -2,7 +2,7 @@
 
 #this is the game where you pick a int and the computer guesses it.
 
-num = int(raw_input('what integer from 0 to 1,000 do you pick for the computer to guess??'))
+num = int(eval(raw_input('what integer from 0 to 1,000 do you pick for the computer to guess??')))
 guess = 1000
 error='high'
 score = 0
@@ -13,9 +13,9 @@ while True:
     test = guess / 2
     guess = guess - test
     del test
-  print 'guess: ',guess
+  print 'guess: ',str(guess)
   if guess == num :
-    print "computer's score :",score
+    print "computer's score :",str(score)
     break
   else:
     score += 1
@@ -24,4 +24,5 @@ while True:
       error = 'high'
     else:
       print 'too low'
-      error = 'low
+      error = 'low'
+
