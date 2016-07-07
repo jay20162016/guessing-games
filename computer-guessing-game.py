@@ -2,7 +2,12 @@
 
 #this is the game where you pick a int and the computer guesses it.
 
+from sys import exit
+from time import sleep
+
 num = int(eval(raw_input('what integer from 0 to 1,000 do you pick for the computer to guess??')))
+if num > 1000 or num < 0:
+  exit
 guess = 1000
 error='high'
 score = 0
@@ -20,9 +25,9 @@ while True:
   else:
     score += 1
     if guess < num:
-      print 'too high'
-      error = 'high'
-    else:
       print 'too low'
       error = 'low'
-
+    else:
+      print 'too high'
+      error = 'high'
+    sleep(2)
