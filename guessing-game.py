@@ -1,6 +1,9 @@
 #!/usr/bin/python
 
 # this is the game in which you guess the integer.
+#type num to cheat
+
+
 import random
 
 choice = int(eval(raw_input('up to what number??')))
